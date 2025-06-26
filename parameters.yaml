@@ -1,0 +1,58 @@
+biomass_model:
+  m: 0.67 # net_anabolism_exponent
+  n: 0.81 # fasting_catabolism_exponent
+
+ind_growth_model:
+  b: 0.62 # food_assimilation_efficiency
+  a: 0.53 # assimilated_fraction
+  h: 0.8 # food_consumption_coefficient
+  k_min: 0.00133 # fasting_catabolism_coefficient_min
+  j: 0.0132 # fasting_catabolism_coefficient
+  T_opt: 33 # temperature_opt
+  T_min: 24 # temperature_min
+  T_max: 40 # temperature_max
+  UIA_crit: 0.06 # UIA_critical
+  UIA_max: 1.4 # UIA_max
+  DO_crit: 1.0 # DO_critical
+  DO_min: 0.3 # DO_min
+  kappa: 4.6 # temperature_sensitivity_coefficient
+  w_threshold: 550
+  slowdown_gamma: 0.006
+  UIA_slowdown: 0.00025
+  latitude:
+    guangdong: 23.5
+    north_sulawesi: 1.5
+    kafr_el_sheikh: 31.1
+
+temp_model:
+  guangdong: # https://en.climate-data.org/asia/china/guangdong-869/
+    T_mean: 23
+    T_amp: 7.5
+    phase_shift: 80
+  north_sulawesi: # https://en.climate-data.org/asia/indonesia/north-sulawesi/manado-3901/
+    T_mean: 25.0
+    T_amp: 2.0
+    phase_shift: 70
+  kafr_el_sheikh: # https://en.climate-data.org/africa/egypt/kafr-el-sheikh-governorate/kafr-al-sheikh-727/
+    T_mean: 21.5
+    T_amp: 7.5
+    phase_shift: 90
+
+reward_cost_parameters:
+  guangdong:
+    P_s: 3.78 # $/kg Fish Selling Price
+    P_f: 1.12 # $/kg Fish Food Price
+    P_e: 0.088 # $/kWh Electricity Price
+  north_sulawesi:
+    P_s: 3.10
+    P_f: 1.29
+    P_e: 0.0068
+  kafr_el_sheikh:
+    P_s: 3.40
+    P_f: 0.55
+    P_e: 0.047
+  common:
+    c_p: 4.2 # J/(kg·°C) Specific Heat
+    V: 1000 # L Tank Volume
+    m: 1 # kg Water Mass
+    P_max: 0.102 # kWh Max Electrical Power
