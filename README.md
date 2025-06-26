@@ -2,6 +2,8 @@
 
 Optimize fish feeding, energy use, and water quality using Reinforcement Learning (RL) to enhance sustainability and profitability in inland tank aquaculture.
 
+https://github.com/user-attachments/assets/99d1b544-3e2f-4d5c-abf6-9fdf450051c3
+
 ---
 
 ## 🧠 Core Concepts
